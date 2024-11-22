@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>My Projects</title>
+    <style>
+        @media (max-width: 640px) {
+            .site-title {
+                font-size: 1.5rem;
+            }
+            nav ul {
+                flex-direction: column;
+                gap: 1rem;
+            }
+            .profile-image {
+                width: 80px;
+                height: 80px;
+            }
+            .hero-title {
+                font-size: 1.5rem;
+            }
+            .hero-subtitle {
+                font-size: 1rem;
+            }
+        }
+
+        @media (min-width: 641px) and (max-width: 1024px) {
+            .site-title {
+                font-size: 2rem;
+            }
+            .profile-image {
+                width: 120px;
+                height: 120px;
+            }
+            .hero-title {
+                font-size: 2rem;
+            }
+            .hero-subtitle {
+                font-size: 1.25rem;
+            }
+            nav ul {
+                gap: 1.5rem;
+            }
+        }
+
+        @media (min-width: 1025px) {
+            .site-title {
+                font-size: 2.5rem;
+            }
+            .profile-image {
+                width: 150px;
+                height: 150px;
+            }
+            .hero-title {
+                font-size: 2.5rem;
+            }
+            .hero-subtitle {
+                font-size: 1.5rem;
+            }
+            nav ul {
+                gap: 2rem;
+            }
+        }
+
+        body {
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        main {
+            flex: 1;
+        }
+
+        #menu-toggle:checked + #menu {
+            display: flex;
+        }
+    </style>
+</head>
+<body class="bg-zinc-100">
+    <nav class="bg-white p-5 lg:hidden">
+        <div class="flex justify-between items-center">
+            <a href="homePage.html" class="site-title font-bold">Muhammad Maaz</a>
+            <label for="menu-toggle" class="block cursor-pointer">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+                </svg>
+            </label>
+        </div>
+        <input type="checkbox" id="menu-toggle" class="hidden">
+        <ul id="menu" class="hidden flex-col space-y-4 mt-4 text-sm text-black">
+            <li><a href="homePage.html" class="hover:text-gray-600 hover:underline">Home</a></li>
+            <li><a href="profile.html" class="hover:text-gray-600 hover:underline">Personal Profile</a></li>
+            <li><a href="gallery.html" class="hover:text-gray-600 hover:underline">Gallery Page</a></li>
+            <li><a href="career.html" class="hover:text-gray-600 hover:underline">Career Goals</a></li>
+            <li><a href="projects.html" class="hover:text-gray-600 hover:underline">Projects</a></li>
+            <li><a href="skills.html" class="hover:text-gray-600 hover:underline">Skills & Interests</a></li>
+            <li><a href="contacts.html" class="hover:text-gray-600 hover:underline">Contact Us</a></li>
+        </ul>
+    </nav>
+
+    <nav class="hidden lg:flex mx-4 sm:mx-10 my-5 justify-between items-center px-4 sm:px-6 py-4 font-sans">
+        <div class="flex items-center">
+            <span class="site-title font-bold">Muhammad Maaz</span>
+        </div>
+        <ul class="flex flex-wrap justify-end space-x-4 text-sm text-black">
+            <li><a href="homePage.html" class="hover:text-gray-600 hover:underline">Home</a></li>
+            <li><a href="profile.html" class="hover:text-gray-600 hover:underline">Personal Profile</a></li>
+            <li><a href="gallery.html" class="hover:text-gray-600 hover:underline">Gallery Page</a></li>
+            <li><a href="career.html" class="hover:text-gray-600 hover:underline">Career Goals</a></li>
+            <li><a href="projects.html" class="hover:text-gray-600 hover:underline">Projects</a></li>
+            <li><a href="skills.html" class="hover:text-gray-600 hover:underline">Skills & Interests</a></li>
+            <li><a href="contacts.html" class="hover:text-gray-600 hover:underline">Contact Us</a></li>
+        </ul>
+    </nav>
+
+
+    <main class="container mx-auto px-10 py-8">
+        <h1 class="hero-title text-4xl sm:text-5xl md:text-5xl font-bold text-center mb-8 sm:mb-12 text-gray-700">
+            My Projects
+        </h1>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
+            <div class="bg-white rounded-lg shadow-md overflow-hidden transition-transform duration-300 hover:scale-105">
+                <img src="images/AMS-proj.png" alt="Airline Management System" class="w-full h-48 object-cover">
+                <div class="p-4 sm:p-6">
+                    <h2 class="text-xl sm:text-2xl font-bold mb-2 text-gray-800">Airline Management System</h2>
+                    <p class="text-sm sm:text-base text-gray-600 mb-4">A full-stack desktop application for managing airline operations.</p>
+                    <div class="mb-4 flex flex-wrap">
+                        <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-xs sm:text-sm font-semibold text-gray-700 mr-2 mb-2">#JavaFX</span>
+                        <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-xs sm:text-sm font-semibold text-gray-700 mr-2 mb-2">#Java</span>
+                        <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-xs sm:text-sm font-semibold text-gray-700 mr-2 mb-2">#MySQL</span>
+                    </div>
+                    <div class="flex justify-between text-sm sm:text-base">
+                        <a href="https://github.com/MuhammadMaaz7/Airline-Management-System.git" class="text-blue-500 hover:underline">GitHub</a>
+                        <a href="#" class="text-green-500 hover:underline">Live Demo</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="bg-white rounded-lg shadow-md overflow-hidden transition-transform duration-300 hover:scale-105">
+                <img src="images/CMS-proj.png" alt="Cafe Management System" class="w-full h-48 object-cover">
+                <div class="p-4 sm:p-6">
+                    <h2 class="text-xl sm:text-2xl font-bold mb-2 text-gray-800">Cafe Management System</h2>
+                    <p class="text-sm sm:text-base text-gray-600 mb-4">A responsive web application for managing overall cafe functionality.</p>
+                    <div class="mb-4 flex flex-wrap">
+                        <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-xs sm:text-sm font-semibold text-gray-700 mr-2 mb-2">#C#</span>
+                        <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-xs sm:text-sm font-semibold text-gray-700 mr-2 mb-2">#.Net</span>
+                        <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-xs sm:text-sm font-semibold text-gray-700 mr-2 mb-2">#MSSQL</span>
+                    </div>
+                    <div class="flex justify-between text-sm sm:text-base">
+                        <a href="#" class="text-blue-500 hover:underline">GitHub</a>
+                        <a href="#" class="text-green-500 hover:underline">Live Demo</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="bg-white rounded-lg shadow-md overflow-hidden transition-transform duration-300 hover:scale-105">
+                <img src="images/CMSS-proj.png" alt="Complaint Management System" class="w-full h-48 object-cover">
+                <div class="p-4 sm:p-6">
+                    <h2 class="text-xl sm:text-2xl font-bold mb-2 text-gray-800">Complaint Management System</h2>
+                    <p class="text-sm sm:text-base text-gray-600 mb-4">An ERP app for complaint managing and handling related issues.</p>
+                    <div class="mb-4 flex flex-wrap">
+                        <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-xs sm:text-sm font-semibold text-gray-700 mr-2 mb-2">#Frappe</span>
+                        <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-xs sm:text-sm font-semibold text-gray-700 mr-2 mb-2">#ERPNext</span>
+                    </div>
+                    <div class="flex justify-between text-sm sm:text-base">
+                        <a href="https://github.com/MuhammadMaaz7/CMS.git" class="text-blue-500 hover:underline">GitHub</a>
+                        <a href="#" class="text-green-500 hover:underline">Live Demo</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="bg-white rounded-lg shadow-md overflow-hidden transition-transform duration-300 hover:scale-105">
+                <img src="images/blog-proj.jpeg" alt="Blog CMS" class="w-full h-48 object-cover">
+                <div class="p-4 sm:p-6">
+                    <h2 class="text-xl sm:text-2xl font-bold mb-2 text-gray-800">Blog CMS</h2>
+                    <p class="text-sm sm:text-base text-gray-600 mb-4">A content management system for creating and managing blog posts.</p>
+                    <div class="mb-4 flex flex-wrap">
+                        <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-xs sm:text-sm font-semibold text-gray-700 mr-2 mb-2">#Django</span>
+                        <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-xs sm:text-sm font-semibold text-gray-700 mr-2 mb-2">#PostgreSQL</span>
+                        <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-xs sm:text-sm font-semibold text-gray-700 mr-2 mb-2">#Bootstrap</span>
+                    </div>
+                    <div class="flex justify-between text-sm sm:text-base">
+                        <a href="#" class="text-blue-500 hover:underline">GitHub</a>
+                        <a href="#" class="text-green-500 hover:underline">Live Demo</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="bg-white rounded-lg shadow-md overflow-hidden transition-transform duration-300 hover:scale-105">
+                <img src="images/fitness-proj.jpeg" alt="Fitness Tracker" class="w-full h-48 object-cover">
+                <div class="p-4 sm:p-6">
+                    <h2 class="text-xl sm:text-2xl font-bold mb-2 text-gray-800">Fitness Tracker</h2>
+                    <p class="text-sm sm:text-base text-gray-600 mb-4">A web app for tracking workouts, nutrition, and fitness goals.</p>
+                    <div class="mb-4 flex flex-wrap">
+                        <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-xs sm:text-sm font-semibold text-gray-700 mr-2 mb-2">#Angular</span>
+                        <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-xs sm:text-sm font-semibold text-gray-700 mr-2 mb-2">#Firebase</span>
+                        <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-xs sm:text-sm font-semibold text-gray-700 mr-2 mb-2">#Chart.js</span>
+                    </div>
+                    <div class="flex justify-between text-sm sm:text-base">
+                        <a href="#" class="text-blue-500 hover:underline">GitHub</a>
+                        <a href="#" class="text-green-500 hover:underline">Live Demo</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="bg-white rounded-lg shadow-md overflow-hidden transition-transform duration-300 hover:scale-105">
+                <img src="images/ai-proj.jpeg" alt="AI Chatbot" class="w-full h-48 object-cover">
+                <div class="p-4 sm:p-6">
+                    <h2 class="text-xl sm:text-2xl font-bold mb-2 text-gray-800">AI Chatbot</h2>
+                    <p class="text-sm sm:text-base text-gray-600 mb-4">An intelligent chatbot powered by machine learning for customer support.</p>
+                    <div class="mb-4 flex flex-wrap">
+                        <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-xs sm:text-sm font-semibold text-gray-700 mr-2 mb-2">#Python</span>
+                        <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-xs sm:text-sm font-semibold text-gray-700 mr-2 mb-2">#TensorFlow</span>
+                        <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-xs sm:text-sm font-semibold text-gray-700 mr-2 mb-2">#Flask</span>
+                    </div>
+                    <div class="flex justify-between text-sm sm:text-base">
+                        <a href="#" class="text-blue-500 hover:underline">GitHub</a>
+                        <a href="#" class="text-green-500 hover:underline">Live Demo</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="bg-gray-800 text-white py-5">
+        <div class="container mx-auto px-10 flex flex-col md:flex-row justify-between items-center">
+            <p class="text-md mb-4 md:mb-0">&copy; 2024 M. Maaz Uddin. All rights reserved.</p>
+            <div class="flex space-x-6">
+                <a href="https://linkedin.com/in/muhammad-maaz-uddin-512b4b26b/" class="hover:text-blue-500">
+                    <span class="[&>svg]:h-8 [&>svg]:w-8">
+                      <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 448 512">
+                        <path d="M100.3 448H7.4V148.9h92.9zM53.8 108.1C24.1 108.1 0 83.5 0 53.8a53.8 53.8 0 0 1 107.6 0c0 29.7-24.1 54.3-53.8 54.3zM447.9 448h-92.7V302.4c0-34.7-.7-79.2-48.3-79.2-48.3 0-55.7 37.7-55.7 76.7V448h-92.8V148.9h89.1v40.8h1.3c12.4-23.5 42.7-48.3 87.9-48.3 94 0 111.3 61.9 111.3 142.3V448z"/>
+                      </svg>
+                    </span>
+                </a>
+                <a href="https://github.com/MuhammadMaaz7" class="hover:text-gray-600">
+                    <span class="[&>svg]:h-8 [&>svg]:w-8">
+                      <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 496 512">
+                        <path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3 .3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5 .3-6.2 2.3zm44.2-1.7c-2.9 .7-4.9 2.6-4.6 4.9 .3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3 .7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3 .3 2.9 2.3 3.9 1.6 1 3.6 .7 4.3-.7 .7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3 .7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3 .7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/>
+                      </svg>
+                    </span>
+                </a>
+                <a href="https://www.instagram.com/maaz_._a?igsh=MTYzN2V4emd0c29yYg==" class="hover:text-pink-500">
+                    <span class="[&>svg]:h-8 [&>svg]:w-8">
+                      <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 448 512">
+                        <path d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"/>
+                      </svg>
+                    </span>
+                </a>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
